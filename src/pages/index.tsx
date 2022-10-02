@@ -1,8 +1,8 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import type { ReactElement } from 'react'
 import type { NextPageWithLayout } from './_app'
 import { Layout } from '@/components/layout/layout'
+import { Profile } from '@/components/profile/profile'
 
 const Home: NextPageWithLayout = () => {
   return (
@@ -16,6 +16,7 @@ const Home: NextPageWithLayout = () => {
         <h1 id="section-profile" className="text-3xl pt-40 md:pt-20">
           Profile
         </h1>
+        <Profile />
         <div className="h-96"></div>
         <h1 id="section-skills" className="text-3xl pt-40 md:pt-20">
           Skills
