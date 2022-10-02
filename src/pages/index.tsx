@@ -1,10 +1,12 @@
-import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import type { ReactElement } from 'react'
+import type { NextPageWithLayout } from './_app'
+import { Layout } from '@/components/layout/layout'
 
-const Home: NextPage = () => {
+const Home: NextPageWithLayout = () => {
   return (
-    <div className="container text-center">
+    <div className="container text-center bg-cbg">
       <Head>
         <title>YOS0602</title>
         <meta name="description" content="portfolio of YOS0602" />
@@ -30,6 +32,10 @@ const Home: NextPage = () => {
       </footer>
     </div>
   )
+}
+
+Home.getLayout = function getLayout(page: ReactElement) {
+  return <Layout>{page}</Layout>
 }
 
 export default Home
