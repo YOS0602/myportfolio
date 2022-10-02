@@ -12,7 +12,9 @@
     "lint:fix": "npm run lint --fix",
     "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json,css}'",
     "test": "jest",
-    "test:w": "jest --watch"
+    "test:w": "jest --watch",
+    "export": "next build && next export",
+    "serve:static": "cd out && npx http-server"
   },
   "dependencies": {
     "next": "12.3.1",
