@@ -8,7 +8,7 @@ type LayoutProps = Required<{
 }>
 
 export const Layout = ({ children }: LayoutProps) => (
-  <div>
+  <div className="text-nice-gray font-extralight ">
     <Navbar />
     {children}
     <Footer />
