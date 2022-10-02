@@ -13,24 +13,25 @@ const Home: NextPageWithLayout = () => {
           <meta name="description" content="portfolio of YOS0602" />
           <link rel="icon" href="/favicon.png" />
         </Head>
-        <h1 id="section-profile" className="text-3xl pt-40 md:pt-20">
-          Profile
-        </h1>
-        <Profile />
-        <div className="h-96"></div>
-        <h1 id="section-skills" className="text-3xl pt-40 md:pt-20">
+        <div className="my-44">
+          <h1 id="section-profile" className="text-4xl md:text-6xl pt-40 md:pt-20">
+            Profile
+          </h1>
+          <Profile />
+        </div>
+        <h1 id="section-skills" className="text-4xl md:text-6xl pt-40 md:pt-20">
           Skills
         </h1>
         <div className="h-96"></div>
-        <h1 id="section-qualifications" className="text-3xl pt-40 md:pt-20">
+        <h1 id="section-qualifications" className="text-4xl md:text-6xl pt-40 md:pt-20">
           Qualifications
         </h1>
         <div className="h-96"></div>
-        <h1 id="section-works" className="text-3xl pt-40 md:pt-20">
+        <h1 id="section-works" className="text-4xl md:text-6xl pt-40 md:pt-20">
           Works
         </h1>
         <div className="h-96"></div>
-        <h1 id="section-contacts" className="text-3xl pt-40 md:pt-20">
+        <h1 id="section-contacts" className="text-4xl md:text-6xl pt-40 md:pt-20">
           Contacts
         </h1>
         <div className="h-96"></div>
