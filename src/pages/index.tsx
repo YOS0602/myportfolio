@@ -6,30 +6,33 @@ import { Layout } from '@/components/layout/layout'
 
 const Home: NextPageWithLayout = () => {
   return (
-    <div className="bg-cbg text-nice-gray py-8">
-      <div className="container text-center ">
+    <div className="bg-cbg text-nice-gray py-52 sm:py-40 md:py-20">
+      <div className="container text-center">
         <Head>
           <title>YOS0602</title>
           <meta name="description" content="portfolio of YOS0602" />
           <link rel="icon" href="/favicon.png" />
         </Head>
-        <h1 className="text-3xl font-bold">Profile</h1>
-        <h1 className="text-3xl font-bold">Skills</h1>
-        <p className="">
-          Get started by editing <code className="">pages/index.tsx</code>
-        </p>
-        <footer>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Powered by{' '}
-            <span>
-              <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-            </span>
-          </a>
-        </footer>
+        <h1 id="section-profile" className="text-3xl pt-40 md:pt-20">
+          Profile
+        </h1>
+        <div className="h-96"></div>
+        <h1 id="section-skills" className="text-3xl pt-40 md:pt-20">
+          Skills
+        </h1>
+        <div className="h-96"></div>
+        <h1 id="section-qualifications" className="text-3xl pt-40 md:pt-20">
+          Qualifications
+        </h1>
+        <div className="h-96"></div>
+        <h1 id="section-works" className="text-3xl pt-40 md:pt-20">
+          Works
+        </h1>
+        <div className="h-96"></div>
+        <h1 id="section-contacts" className="text-3xl pt-40 md:pt-20">
+          Contacts
+        </h1>
+        <div className="h-96"></div>
       </div>
     </div>
   )
