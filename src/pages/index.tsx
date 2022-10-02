@@ -3,6 +3,7 @@ import type { ReactElement } from 'react'
 import type { NextPageWithLayout } from './_app'
 import { Layout } from '@/components/layout/layout'
 import { Profile } from '@/components/profile/profile'
+import { Qualifications } from '@/components/qualifications/qualifications'
 import { Contacts } from '@/components/contacts/contacts'
 
 const Home: NextPageWithLayout = () => {
@@ -36,7 +37,7 @@ const Home: NextPageWithLayout = () => {
           >
             Qualifications
           </h1>
-          {/* <Qualifications /> */}
+          <Qualifications />
         </div>
 
         <div className="my-44">
