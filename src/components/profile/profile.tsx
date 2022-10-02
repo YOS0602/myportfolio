@@ -15,6 +15,7 @@ export const Profile = (): JSX.Element => {
         </div>
         <div className="p-4 md:py-10 text-4xl lg:text-5xl">YOS0602</div>
         <div id="github-link" className="py-4 pl-5 pr-2">
+          {/* TODO 別タブで開くようにしたい */}
           <Link href="https://github.com/YOS0602">
             <svg
               className="cursor-pointer"
@@ -44,7 +45,7 @@ export const Profile = (): JSX.Element => {
         </div>
       </div>
 
-      <div className="text-center text-lg mx-2 sm:mx-20 xl:mx-52">
+      <div className="text-center mx-2 sm:mx-20 xl:mx-52">
         <p className="text-left">
           職務経歴書 ※準備中
           <br />
