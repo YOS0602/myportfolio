@@ -38,6 +38,7 @@ export const Navbar = (): JSX.Element => {
     // 横幅が十分あれば、リンクをハンバーガメニューではなくflexで表示する
     if (1280 <= width) {
       setShowNavbar(false)
+      setOpenNavbar(false)
     } else {
       setShowNavbar(true)
     }
@@ -64,7 +65,7 @@ export const Navbar = (): JSX.Element => {
     <header
       className={`fixed w-full ${
         openNavbar ? 'h-screen opacity-95' : ''
-      } text-center font-bold bg-c1 text-c5 text-3xl py-4 z-40 overflow-y-scroll`}
+      } text-center font-bold bg-c1 text-c5 text-3xl py-4 z-20 overflow-y-scroll`}
     >
       {showNavbar ? (
         <div>

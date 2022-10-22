@@ -4,6 +4,7 @@ import type { NextPageWithLayout } from './_app'
 import { Layout } from '@/components/layout/layout'
 import { Profile } from '@/components/profile/profile'
 import { Qualifications } from '@/components/qualifications/qualifications'
+import { Works } from '@/components/works/works'
 import { Contacts } from '@/components/contacts/contacts'
 
 const Home: NextPageWithLayout = () => {
@@ -41,7 +42,7 @@ const Home: NextPageWithLayout = () => {
           <h1 id="section-works" className="text-4xl md:text-6xl pt-20 pb-4 md:pb-20">
             Works
           </h1>
-          {/* <Works /> */}
+          <Works />
         </div>
 
         <div className="my-10 md:my-44">

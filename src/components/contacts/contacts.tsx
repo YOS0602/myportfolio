@@ -12,9 +12,7 @@ export const Contacts = (): JSX.Element => {
           ></path>
         </svg>
         <Link href="mailto:yoshitaka.t.biz@gmail.com">
-          <a className="px-4 text-blue-400 hover:text-blue-600 underline">
-            yoshitaka.t.biz@gmail.com
-          </a>
+          <a className="px-4 text-blue-400 hover:text-blue-600">yoshitaka.t.biz@gmail.com</a>
         </Link>
       </div>
     </div>
