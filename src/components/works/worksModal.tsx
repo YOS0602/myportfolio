@@ -4,10 +4,6 @@ import { useWorksModal } from '../../hooks/useWorksModal'
 export const WorksModal = (): JSX.Element => {
   const { showWorksModal, closeModal } = useWorksModal()
 
-  useEffect(() => {
-    console.log({ showWorksModal })
-  }, [showWorksModal])
-
   return (
     <>
       {showWorksModal && (
