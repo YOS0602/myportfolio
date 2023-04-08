@@ -8,15 +8,13 @@ export const useWorksModal = () => {
   const [showWorksModal, setShowWorksModal] = useState<boolean>(false)
 
   function openModal() {
+    console.log('openModal called')
     setShowWorksModal(true)
   }
   function closeModal() {
+    console.log('closeModal called')
     setShowWorksModal(false)
   }
-
-  useEffect(() => {
-    console.log({ showWorksModal })
-  }, [showWorksModal])
 
   return {
     showWorksModal,
