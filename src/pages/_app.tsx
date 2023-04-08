@@ -15,6 +15,10 @@ type AppPropsWithLayout = AppProps & {
 
 export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   // Use the layout defined at the page level, if available
+  /**
+   * page Componentに`getLayout`関数が設定されていれば、その関数を呼び出すようにし、
+   * 設定されていなければ、ComponentとしてreturnされているJSX(TSX)を描画する。
+   */
   const getLayout = Component.getLayout ?? ((page) => page)
 
   return getLayout(<Component {...pageProps} />)

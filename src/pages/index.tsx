@@ -56,6 +56,9 @@ const Home: NextPageWithLayout = () => {
   )
 }
 
+/**
+ * NavBarとFooterを表示するよう設定する。
+ */
 Home.getLayout = function getLayout(page: ReactElement) {
   return <Layout>{page}</Layout>
 }

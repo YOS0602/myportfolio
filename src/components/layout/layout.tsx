@@ -7,6 +7,9 @@ type LayoutProps = Required<{
   readonly children: ReactElement
 }>
 
+/**
+ * ナビゲーションバーとFooterを表示するように設定するComponent
+ */
 export const Layout = ({ children }: LayoutProps) => (
   <div className="text-nice-gray font-extralight ">
     <Navbar />
