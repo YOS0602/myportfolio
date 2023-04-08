@@ -1,14 +1,19 @@
 import { useEffect, useState } from 'react'
 
+/**
+ * TODO Comment
+ * @returns
+ */
 export const useWorksModal = () => {
   const [showWorksModal, setShowWorksModal] = useState<boolean>(false)
 
-  const openModal = () => {
+  function openModal() {
     setShowWorksModal(true)
   }
-  const closeModal = () => {
+  function closeModal() {
     setShowWorksModal(false)
   }
+
   useEffect(() => {
     console.log({ showWorksModal })
   }, [showWorksModal])
