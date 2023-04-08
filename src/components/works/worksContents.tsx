@@ -1,6 +1,15 @@
 import Link from 'next/link'
 
-export const worksContents = [
+export type TWorksContents = {
+  id: number
+  imageSrc: string
+  imageAlt: string
+  title: JSX.Element | string
+  description: JSX.Element | string
+  skills: string[]
+}
+
+export const worksContents: TWorksContents[] = [
   {
     id: 1,
     imageSrc: '/img/undraw_factory_dy-0-a.svg',
