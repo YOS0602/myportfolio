@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export const worksData = [
+export const worksContents = [
   {
     id: 1,
     imageSrc: '/img/undraw_factory_dy-0-a.svg',
