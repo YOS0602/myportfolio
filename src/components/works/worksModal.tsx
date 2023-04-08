@@ -1,8 +1,8 @@
 type Props = {
   /** Modalを閉じるhooks */
   closeModal: () => void
-  /** TODO 表示する内容を特定するためのid */
-  workId?: number
+  /** 表示する内容を特定するためのid */
+  workId: number
 }
 
 /**

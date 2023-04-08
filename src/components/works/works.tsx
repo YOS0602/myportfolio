@@ -1,12 +1,23 @@
-import { useWorksModal } from '../../hooks/useWorksModal'
+import { useState } from 'react'
 import Image from 'next/image'
 import { WorksModal } from './worksModal'
+import { useWorksModal } from '../../hooks/useWorksModal'
 import { worksContents } from './worksContents'
 
 // image See https://zenn.dev/nbr41to/articles/365e8105efa448
 
 export const Works = (): JSX.Element => {
   const { showWorksModal, openModal, closeModal } = useWorksModal()
+  const [selectedWorkId, setSelectedWorkId] = useState(NaN)
+
+  /**
+   * clickされたworks cardのidをstateにsetし、WorksModalをopenにする。
+   * @param workId
+   */
+  function onClickWorksCard(workId: number) {
+    setSelectedWorkId(workId)
+    openModal()
+  }
 
   return (
     <div className="flex flex-row flex-wrap justify-center">
@@ -14,7 +25,7 @@ export const Works = (): JSX.Element => {
         <div
           key={w.id}
           className="card my-2 xl:my-8 mx-2 p-4 bg-white border-2 border-zinc-200 hover:border-c4 hover:animate-pulse w-full sm:w-2/3 lg:w-5/12 min-h-min cursor-pointer"
-          onClick={openModal}
+          onClick={() => onClickWorksCard(w.id)}
         >
           <div className="icon relative mx-auto w-32 h-24 md:w-48 md:h-36">
             <Image
@@ -29,7 +40,7 @@ export const Works = (): JSX.Element => {
         </div>
       ))}
 
-      {showWorksModal ? <WorksModal closeModal={closeModal} /> : null}
+      {showWorksModal ? <WorksModal closeModal={closeModal} workId={selectedWorkId} /> : null}
     </div>
   )
 }
