@@ -1,18 +1,15 @@
 import { useState } from 'react'
 
 /**
- * TODO Comment
- * @returns
+ * WorksのModalにおける表示/非表示を決定するstateを管理する。
  */
 export const useWorksModal = () => {
   const [showWorksModal, setShowWorksModal] = useState<boolean>(false)
 
   function openModal() {
-    console.log('openModal called')
     setShowWorksModal(true)
   }
   function closeModal() {
-    console.log('closeModal called')
     setShowWorksModal(false)
   }
 
