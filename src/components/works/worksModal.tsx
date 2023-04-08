@@ -1,20 +1,22 @@
-// import { useEffect } from 'react'
-import { useWorksModal } from '../../hooks/useWorksModal'
+type Props = {
+  /** Modalを閉じるhooks */
+  closeModal: () => void
+  /** TODO 表示する内容を特定するためのid */
+  workId?: number
+}
 
-export const WorksModal = (): JSX.Element => {
-  const { showWorksModal, closeModal } = useWorksModal()
-
+/**
+ * Worksの詳細を説明するModal Component。
+ * 表示内容はpropsで渡されたworkのidをもとに、Contentsデータから取得する。
+ */
+export const WorksModal = (props: Props): JSX.Element => {
   return (
     <>
-      <div>{`showWorksModal at WorksModal Component: ${showWorksModal}`}</div>
-      {showWorksModal && (
-        <div
-          className="overlay fixed top-0 left-0 w-full h-full bg-c1 opacity-80 z-30"
-          onClick={closeModal}
-        >
-          Modalです
-        </div>
-      )}
+      <div className="overlay fixed top-0 left-0 w-full h-full bg-c1 opacity-80 z-30">
+        <p>Modalです</p>
+        <button onClick={props.closeModal}>close</button>
+        {/* TODO idをもとに、worksContentsから表示内容を取得する */}
+      </div>
     </>
   )
 }

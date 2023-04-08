@@ -1,16 +1,16 @@
 import { useWorksModal } from '../../hooks/useWorksModal'
 import Image from 'next/image'
 import { WorksModal } from './worksModal'
-import { worksData } from './worksData'
+import { worksContents } from './worksContents'
 
 // image See https://zenn.dev/nbr41to/articles/365e8105efa448
 
 export const Works = (): JSX.Element => {
-  const { showWorksModal, openModal } = useWorksModal()
+  const { showWorksModal, openModal, closeModal } = useWorksModal()
 
   return (
     <div className="flex flex-row flex-wrap justify-center">
-      {worksData.map((w) => (
+      {worksContents.map((w) => (
         <div
           key={w.id}
           className="card my-2 xl:my-8 mx-2 p-4 bg-white border-2 border-zinc-200 hover:border-c4 hover:animate-pulse w-full sm:w-2/3 lg:w-5/12 min-h-min cursor-pointer"
@@ -28,8 +28,8 @@ export const Works = (): JSX.Element => {
           <div className="title mt-4 text-base">{w.title}</div>
         </div>
       ))}
-      <div>{`showWorksModal at Works Component: ${showWorksModal}`}</div>
-      <WorksModal />
+
+      {showWorksModal ? <WorksModal closeModal={closeModal} /> : null}
     </div>
   )
 }
