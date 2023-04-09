@@ -16,24 +16,27 @@ export const WorksModal = (props: Props): JSX.Element => {
 
   return (
     <>
-      <div className="w- rounded bg-c5 z-40">
-        <div className="px-4">
-          <div className="flex justify-between items-center py-2">
-            <h1 className="text-left text-2xl">{title}</h1>
-            <button className="w-12 h-12 bg-c2 rounded-full p-2" onClick={props.closeModal}>
-              X
-            </button>
-          </div>
-          <div className="text-left text-base py-2">{description}</div>
-          <div className="py-2">
-            <SkillsList skills={skills} />
+      <div className="modal-overlay fixed top-0 left-0 w-full h-full flex items-center justify-center">
+        <div
+          className="modal-bg absolute w-full h-full bg-c1 opacity-50 z-30"
+          onClick={props.closeModal}
+        ></div>
+
+        <div className="modal-content w-2/3 rounded bg-cbg opacity-100 z-30">
+          <div className="px-4">
+            <div className="flex justify-between items-center py-2">
+              <h1 className="text-left text-2xl">{title}</h1>
+              <button className="w-12 h-12 bg-c2 rounded-full p-2" onClick={props.closeModal}>
+                X
+              </button>
+            </div>
+            <div className="text-left text-base py-2">{description}</div>
+            <div className="py-2">
+              <SkillsList skills={skills} />
+            </div>
           </div>
         </div>
       </div>
-      <div
-        className="overlay fixed top-0 left-0 w-full h-full bg-c1 opacity-80 z-30"
-        onClick={props.closeModal}
-      ></div>
     </>
   )
 }
