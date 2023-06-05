@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { worksContents, TWorksContents } from './worksContents'
 
 type Props = {
@@ -12,7 +13,7 @@ type Props = {
  * 表示内容はpropsで渡されたworkのidをもとに、Contentsデータから取得する。
  */
 export const WorksModal = (props: Props): JSX.Element => {
-  const { title, description, skills } = getWorkContent(props.workId)
+  const { imageSrc, imageAlt, title, description, skills } = getWorkContent(props.workId)
 
   return (
     <>
@@ -22,17 +23,23 @@ export const WorksModal = (props: Props): JSX.Element => {
           onClick={props.closeModal}
         ></div>
 
-        <div className="modal-content w-2/3 rounded bg-cbg opacity-100 z-30">
-          <div className="px-4">
-            <div className="flex justify-between items-center py-2">
-              <h1 className="text-left text-2xl">{title}</h1>
-              <button className="w-12 h-12 bg-c2 rounded-full p-2" onClick={props.closeModal}>
-                X
-              </button>
+        <div className="modal-content w-3/4 h-3/5 rounded bg-cbg opacity-100 z-30">
+          <div className="detail-grid px-4 grid grid-cols-3 gap-4 items-center">
+            <div className="work-image col-span-1 relative w-32 h-24 md:w-48 md:h-36">
+              <Image src={imageSrc} alt={imageAlt} layout="fill" objectFit="contain" />
             </div>
-            <div className="text-left text-base py-2">{description}</div>
-            <div className="py-2">
-              <SkillsList skills={skills} />
+
+            <div className="col-span-2">
+              <div className="flex justify-between items-center py-2">
+                <h1 className="text-left text-2xl">{title}</h1>
+                <button className="w-12 h-12 bg-c2 rounded-full p-2" onClick={props.closeModal}>
+                  X
+                </button>
+              </div>
+              <div className="text-left text-base py-2">{description}</div>
+              <div className="py-2">
+                <SkillsList skills={skills} />
+              </div>
             </div>
           </div>
         </div>

@@ -24,7 +24,7 @@ export const Works = (): JSX.Element => {
       {worksContents.map((w) => (
         <div
           key={w.id}
-          className="card my-2 xl:my-8 mx-2 p-4 bg-white border-2 border-zinc-200 hover:border-c4 hover:animate-pulse w-full sm:w-2/3 lg:w-5/12 min-h-min cursor-pointer rounded"
+          className="work-card my-2 xl:my-8 mx-2 p-4 bg-white border-2 border-zinc-200 hover:border-c4 hover:animate-pulse w-full sm:w-2/3 lg:w-5/12 min-h-min cursor-pointer rounded"
           onClick={() => onClickWorksCard(w.id)}
         >
           <div className="icon relative mx-auto w-32 h-24 md:w-48 md:h-36">
