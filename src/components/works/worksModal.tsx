@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { useEffect, useCallback } from 'react'
 import { worksContents, TWorksContents } from './worksContents'
 
 type Props = {
@@ -14,6 +15,21 @@ type Props = {
  */
 export const WorksModal = (props: Props): JSX.Element => {
   const { imageSrc, imageAlt, title, description, skills } = getWorkContent(props.workId)
+
+  /** close Modal when Escape key is pressed */
+  const handleKeyUp = useCallback(
+    function (event: KeyboardEvent) {
+      if (event.key === 'Escape') {
+        props.closeModal()
+      }
+    },
+    [props]
+  )
+
+  useEffect(() => {
+    document.addEventListener('keyup', handleKeyUp, false)
+    return () => document.removeEventListener('keyup', handleKeyUp, false)
+  }, [handleKeyUp])
 
   return (
     <>
