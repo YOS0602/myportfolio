@@ -69,8 +69,13 @@ export const Navbar = (): JSX.Element => {
     >
       {showNavbar ? (
         <div>
-          <div className="mr-4 text-right" onClick={onclickNavbarButton}>
-            {openNavbar ? 'X' : '三'}
+          <div className="mr-4 text-right">
+            <span
+              className="p-2 cursor-context-menu"
+              onClick={onclickNavbarButton}
+            >
+              {openNavbar ? 'X' : '三'}
+            </span>
           </div>
           {openNavbar && NavList}
         </div>
