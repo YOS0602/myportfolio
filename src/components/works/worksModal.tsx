@@ -41,7 +41,7 @@ export const WorksModal = (props: Props): JSX.Element => {
           onClick={props.closeModal}
         ></div>
 
-        <div className="modal-content w-5/6 h-5/6 md:w-3/4 md:h-3/5 rounded bg-cbg opacity-100 z-30">
+        <div className="modal-content w-5/6 h-4/5 md:w-3/4 md:h-3/5 rounded bg-cbg opacity-100 z-30 overflow-y-scroll">
           <div className="detail-grid px-4 grid grid-cols-3 gap-4 items-center">
             <div className="work-image col-span-1 relative w-32 h-24 md:w-48 md:h-36 hidden sm:block">
               <Image
