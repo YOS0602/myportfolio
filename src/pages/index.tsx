@@ -1,35 +1,66 @@
-import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
+import type { ReactElement } from 'react'
+import type { NextPageWithLayout } from './_app'
+import { Layout } from '@/components/layout/layout'
+import { Profile } from '@/components/profile/profile'
+import { Qualifications } from '@/components/qualifications/qualifications'
+import { Works } from '@/components/works/works'
+import { Contacts } from '@/components/contacts/contacts'
 
-const Home: NextPage = () => {
+const Home: NextPageWithLayout = () => {
   return (
-    <div className="container text-center">
-      <Head>
-        <title>YOS0602</title>
-        <meta name="description" content="portfolio of YOS0602" />
-        <link rel="icon" href="/favicon.png" />
-      </Head>
-      <h1 className="text-3xl font-bold underline">
-        Welcome to <a href="https://nextjs.org">Next.js!</a>
-      </h1>
-      <p className="">
-        Get started by editing <code className="">pages/index.tsx</code>
-      </p>
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
+    <div className="bg-cbg text-nice-gray py-20">
+      <div className="container text-center text-lg">
+        <Head>
+          <title>YOS0602</title>
+          <meta name="description" content="portfolio of YOS0602" />
+          <link rel="icon" href="/favicon.png" />
+        </Head>
+
+        <div className="my-10 md:my-44">
+          <h1 id="section-profile" className="text-4xl md:text-6xl pt-20 pb-4 md:pb-20">
+            Profile
+          </h1>
+          <Profile />
+        </div>
+
+        <div className="my-10 md:my-44">
+          <h1 id="section-skills" className="text-4xl md:text-6xl pt-20 pb-4 md:pb-20">
+            Skills
+          </h1>
+          {/* <Skill /> */}
+        </div>
+
+        <div className="my-10 md:my-44">
+          <h1 id="section-qualifications" className="text-4xl md:text-6xl pt-20 pb-4 md:pb-20">
+            Qualifications
+          </h1>
+          <Qualifications />
+        </div>
+
+        <div className="my-10 md:my-44">
+          <h1 id="section-works" className="text-4xl md:text-6xl pt-20 pb-4 md:pb-20">
+            Works
+          </h1>
+          <Works />
+        </div>
+
+        <div className="my-10 md:my-44">
+          <h1 id="section-contacts" className="text-4xl md:text-6xl pt-20 pb-4 md:pb-20">
+            Contacts
+          </h1>
+          <Contacts />
+        </div>
+      </div>
     </div>
   )
+}
+
+/**
+ * NavBarとFooterを表示するよう設定する。
+ */
+Home.getLayout = function getLayout(page: ReactElement) {
+  return <Layout>{page}</Layout>
 }
 
 export default Home
