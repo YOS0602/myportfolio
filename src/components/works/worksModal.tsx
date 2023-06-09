@@ -35,13 +35,13 @@ export const WorksModal = (props: Props): JSX.Element => {
 
   return (
     <>
-      <div className="modal-overlay fixed top-0 left-0 w-full h-full flex items-center justify-center">
+      <div className="modal-overlay fixed top-0 left-0 w-full h-full flex items-center justify-center z-30">
         <div
-          className="modal-bg absolute w-full h-full bg-c1 opacity-50 z-30"
+          className="modal-bg absolute w-full h-full bg-c1 opacity-50 z-40"
           onClick={props.closeModal}
         ></div>
 
-        <div className="modal-content w-5/6 h-4/5 md:w-3/4 md:h-3/5 rounded bg-cbg opacity-100 z-30 overflow-y-scroll">
+        <div className="modal-content w-5/6 h-4/5 md:w-3/4 md:h-3/5 rounded bg-cbg opacity-100 overflow-y-scroll z-40">
           <div className="detail-grid px-4 grid grid-cols-3 gap-4 items-center">
             <div className="work-image col-span-1 relative m-auto w-32 h-24 md:w-48 md:h-36 hidden sm:block">
               <Image
@@ -68,8 +68,13 @@ export const WorksModal = (props: Props): JSX.Element => {
               </div>
             </div>
           </div>
-          <span className="absolute h-10 w-10 rounded-full bg-red-500 border-4 border-gray-500 top-0 right-0" />
         </div>
+        <span
+          className="absolute sm:hidden h-10 w-10 flex justify-center items-center rounded-full bg-c2 top-14 right-4 text-center z-40"
+          onClick={props.closeModal}
+        >
+          <p>X</p>
+        </span>
       </div>
     </>
   )
