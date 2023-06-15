@@ -1,4 +1,9 @@
-type TSkillKind = 'frontend' | 'server side' | 'framework' | 'cloud' | 'other'
+export type TSkillKind =
+  | 'frontend'
+  | 'server side'
+  | 'framework'
+  | 'cloud'
+  | 'other'
 
 export type TSkill = {
   kind: TSkillKind
@@ -6,7 +11,7 @@ export type TSkill = {
   level: number
 }
 
-export const skills: TSkill[] = [
+export const skills: readonly TSkill[] = [
   {
     kind: 'cloud',
     name: 'Microsoft Azure',
