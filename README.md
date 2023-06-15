@@ -3,7 +3,7 @@
 1. 依存モジュールインストール
 1. 開発サーバ起動
 
-```sh
+```terminal
 npm i
 
 npm run dev
@@ -116,7 +116,7 @@ npm update
 
 ## ライブラリのアップデート
 
-### ``のグローバルインストール
+### `npm-check-updates`のグローバルインストール
 
 ```terminal
 % npm i -g npm-check-updates
