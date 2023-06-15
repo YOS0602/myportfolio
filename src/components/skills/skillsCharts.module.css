@@ -1,0 +1,20 @@
+.chart-bar-level-1 {
+  /* NOTE 1.4刻みずつ上げることで、5段階を表現する */
+  height: 1.4rem;
+}
+
+.chart-bar-level-2 {
+  height: 2.8rem;
+}
+
+.chart-bar-level-3 {
+  height: 4.2rem;
+}
+
+.chart-bar-level-4 {
+  height: 5.6rem;
+}
+
+.chart-bar-level-5 {
+  height: 7rem;
+}
