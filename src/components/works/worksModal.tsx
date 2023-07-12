@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { useEffect, useCallback } from 'react'
-import { worksContents, TWorksContents } from './worksContents'
+import { worksContents, TWorksContents } from '@/const/worksContents'
 
 type Props = {
   /** Modalを閉じるhooks */

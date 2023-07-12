@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import { WorksModal } from './worksModal'
 import { useWorksModal } from '../../hooks/useWorksModal'
-import { worksContents } from './worksContents'
+import { worksContents } from '@/const/worksContents'
 
 // image See https://zenn.dev/nbr41to/articles/365e8105efa448
 
@@ -40,7 +40,9 @@ export const Works = (): JSX.Element => {
         </div>
       ))}
 
-      {showWorksModal ? <WorksModal closeModal={closeModal} workId={selectedWorkId} /> : null}
+      {showWorksModal ? (
+        <WorksModal closeModal={closeModal} workId={selectedWorkId} />
+      ) : null}
     </div>
   )
 }
