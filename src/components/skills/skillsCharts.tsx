@@ -1,4 +1,4 @@
-import { skills, TSkill, TSkillKind } from './skillsData'
+import { skills, TSkill, TSkillKind } from '@/const/skillsData'
 import styles from './skillsCharts.module.css'
 
 function filterSkills(kind: TSkillKind): TSkill[] {

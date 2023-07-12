@@ -11,7 +11,7 @@ export type TSkill = {
   level: number
 }
 
-export const skills: readonly TSkill[] = [
+export const skills: Readonly<TSkill>[] = [
   {
     kind: 'cloud',
     name: 'Microsoft Azure',
