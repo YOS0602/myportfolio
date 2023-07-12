@@ -5,7 +5,8 @@
  * @param num
  * @returns 負の数
  */
-export const makeNegative = (num: number): number => (num !== 0 ? -Math.abs(num) : 0)
+export const makeNegative = (num: number): number =>
+  num !== 0 ? -Math.abs(num) : 0
 
 /**
  * 文字列をスペースで区切った単語ごとにリバースする
