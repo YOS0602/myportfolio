@@ -15,6 +15,7 @@ const customJestConfig = {
     // aliasを定義 （tsconfig.jsonのcompilerOptions>pathsの定義に合わせる）
     '^@/components/(.*)$': '<rootDir>/src/components/$1',
     '^@/pages/(.*)$': '<rootDir>/src/pages/$1',
+    '^@/const/(.*)$': '<rootDir>/src/const/$1',
   },
   testEnvironment: 'jest-environment-jsdom',
   clearMocks: true,
