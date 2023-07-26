@@ -21,6 +21,7 @@ const customJestConfig = {
   clearMocks: true,
   verbose: true,
   maxWorkers: 1, // データ層アクセス時に排他エラーが起きるのを防ぐ
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
 }
 
 // createJestConfigを定義することによって、本ファイルで定義された設定がNext.jsの設定に反映されます
