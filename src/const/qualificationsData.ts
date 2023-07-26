@@ -6,10 +6,10 @@ type TQualification = {
 }
 
 export const qualificationsData: Readonly<TQualification>[] = [
-  // {
-  //   ym: '2023/07',
-  //   q: 'Microsoft Certified: Azure Developer Associate AZ-204',
-  // },
+  {
+    ym: '2023/07',
+    q: 'Microsoft Certified: Azure Developer Associate AZ-204',
+  },
   { ym: '2023/07', q: 'Microsoft Certified: Azure Fundamentals AZ-900' },
   { ym: '2022/06', q: '日本漢字能力検定2級' },
   { ym: '2022/03', q: 'Certified Scrum Developer' },
