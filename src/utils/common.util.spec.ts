@@ -1,4 +1,4 @@
-import { makeNegative, reverseWords } from '../common.util'
+import { makeNegative, reverseWords } from './common.util'
 
 describe('common.util', () => {
   it('makeNegative', () => {
