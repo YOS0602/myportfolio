@@ -47,7 +47,7 @@ export const Navbar = (): JSX.Element => {
   const NavList: JSX.Element = (
     <div className="flex flex-col flex-wrap xl:flex-row justify-center">
       {navMenus.map((menu) => (
-        <Link href={menu.href} key={menu.name} scroll={false}>
+        <Link legacyBehavior href={menu.href} key={menu.name} scroll={false}>
           <a
             ref={aTagRef}
             className="px-3 my-8 xl:my-0 hover:underline decoration-c2 hover:decoration-4"

@@ -52,7 +52,7 @@ export const worksContents: TWorksContents[] = [
           </li>
           <li>
             <p>
-              <Link href="https://www.fitbit.com/global/jp/home">
+              <Link legacyBehavior href="https://www.fitbit.com/global/jp/home">
                 <a className="text-blue-400 hover:text-blue-600">Fitbit</a>
               </Link>
               で収集できるバイタルデータ
@@ -60,7 +60,7 @@ export const worksContents: TWorksContents[] = [
           </li>
           <li>
             <p>
-              <Link href="https://www.fitbit.com/global/jp/home">
+              <Link legacyBehavior href="https://www.fitbit.com/global/jp/home">
                 <a className="text-blue-400 hover:text-blue-600">ネコリコ</a>
               </Link>
               IoTデバイスで取得できる環境データ

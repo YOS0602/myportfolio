@@ -17,7 +17,7 @@ export const Profile = (): JSX.Element => {
         <div className="p-4 md:py-10 text-4xl lg:text-5xl">YOS0602</div>
 
         <div id="github-link" className="py-4 pl-5 pr-2">
-          <Link href="https://github.com/YOS0602">
+          <Link legacyBehavior href="https://github.com/YOS0602">
             <a aria-label="github-link" target="_blank" rel="noopener">
               <svg
                 className="cursor-pointer"
@@ -37,7 +37,7 @@ export const Profile = (): JSX.Element => {
         </div>
 
         <div id="qiita-link" className="relative w-16 h-10">
-          <Link href="https://qiita.com/YOS0602">
+          <Link legacyBehavior href="https://qiita.com/YOS0602">
             <a aria-label="qiita-link" target="_blank" rel="noopener">
               <Image
                 src="/img/qiita-logo.png"
