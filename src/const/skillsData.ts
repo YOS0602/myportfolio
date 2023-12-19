@@ -23,6 +23,11 @@ export const skills: Readonly<TSkill>[] = [
     level: 2,
   },
   {
+    kind: 'cloud',
+    name: 'GCP',
+    level: 3,
+  },
+  {
     kind: 'frontend',
     name: 'JavaScript',
     level: 5,
