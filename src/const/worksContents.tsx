@@ -52,16 +52,26 @@ export const worksContents: TWorksContents[] = [
           </li>
           <li>
             <p>
-              <Link href="https://www.fitbit.com/global/jp/home">
-                <a className="text-blue-400 hover:text-blue-600">Fitbit</a>
+              <Link
+                href="https://www.fitbit.com/global/jp/home"
+                target="_blank"
+                rel="noopener"
+                className="text-blue-400 hover:text-blue-600"
+              >
+                Fitbit
               </Link>
               で収集できるバイタルデータ
             </p>
           </li>
           <li>
             <p>
-              <Link href="https://www.fitbit.com/global/jp/home">
-                <a className="text-blue-400 hover:text-blue-600">ネコリコ</a>
+              <Link
+                href="https://www.necolico.co.jp/"
+                target="_blank"
+                rel="noopener"
+                className="text-blue-400 hover:text-blue-600"
+              >
+                ネコリコ
               </Link>
               IoTデバイスで取得できる環境データ
             </p>
