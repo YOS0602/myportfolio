@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import { useEffect, useCallback } from 'react'
 import { worksContents, TWorksContents } from '@/const/worksContents'
 

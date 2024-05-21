@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import { WorksModal } from './worksModal'
 import { useWorksModal } from '../../hooks/useWorksModal'
 import { worksContents } from '@/const/worksContents'
