@@ -9,8 +9,6 @@ const createJestConfig = nextJest({
 // Jestのカスタム設定を設置する場所。従来のプロパティはここで定義。
 /** @type {import('@jest/types').Config.InitialOptions} */
 const customJestConfig = {
-  // jest.setup.jsを作成する場合のみ定義。
-  // setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
   moduleNameMapper: {
     // aliasを定義 （tsconfig.jsonのcompilerOptions>pathsの定義に合わせる）
     '^@/components/(.*)$': '<rootDir>/src/components/$1',
