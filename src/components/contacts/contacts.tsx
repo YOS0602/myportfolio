@@ -1,3 +1,5 @@
+// NOTE git pull origin main する必要があるけど、いっぱいコンフリクトするので頑張れ
+
 // import Link from 'next/link'
 import { useForm } from 'react-hook-form'
 
