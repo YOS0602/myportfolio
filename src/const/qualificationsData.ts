@@ -6,6 +6,7 @@ type TQualification = {
 }
 
 export const qualificationsData: Readonly<TQualification>[] = [
+  { ym: '2024/07', q: '情報処理安全確保支援士試験' },
   {
     ym: '2023/07',
     q: 'Microsoft Certified: Azure Developer Associate AZ-204',
