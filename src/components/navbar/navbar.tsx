@@ -9,7 +9,6 @@ export const Navbar = (): JSX.Element => {
     { href: '#section-skills', name: 'Skills' },
     { href: '#section-qualifications', name: 'Qualifications' },
     { href: '#section-works', name: 'Works' },
-    { href: '#section-contacts', name: 'Contacts' },
   ]
 
   const [showNavbar, setShowNavbar] = useState<boolean>(false) // ハンバーガーメニューを表示するかしないか
