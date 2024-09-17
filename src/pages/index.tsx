@@ -6,7 +6,6 @@ import { Profile } from '@/components/profile/profile'
 import { Skills } from '@/components/skills/skills'
 import { Qualifications } from '@/components/qualifications/qualifications'
 import { Works } from '@/components/works/works'
-import { Contacts } from '@/components/contacts/contacts'
 
 const Home: NextPageWithLayout = () => {
   return (
@@ -56,16 +55,6 @@ const Home: NextPageWithLayout = () => {
             Works
           </h1>
           <Works />
-        </div>
-
-        <div className="my-10 md:my-44">
-          <h1
-            id="section-contacts"
-            className="text-4xl md:text-6xl pt-20 pb-4 md:pb-20"
-          >
-            Contacts
-          </h1>
-          <Contacts />
         </div>
       </div>
     </div>
