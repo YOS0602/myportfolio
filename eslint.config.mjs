@@ -1,29 +1,20 @@
 import globals from 'globals'
-import path from 'node:path'
-import { fileURLToPath } from 'node:url'
-import js from '@eslint/js'
 import { FlatCompat } from '@eslint/eslintrc'
 import eslint from '@eslint/js'
 import tseslint from 'typescript-eslint'
+import eslintConfigPrettier from 'eslint-config-prettier/flat'
 
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
 const compat = new FlatCompat({
-  baseDirectory: __dirname,
-  recommendedConfig: js.configs.recommended,
-  allConfig: js.configs.all,
+  baseDirectory: import.meta.dirname,
 })
 
 export default tseslint.config(
   eslint.configs.recommended,
   tseslint.configs.recommended,
+  // Next.js のeslintプラグインをflatで動かすための設定
+  // see https://github.com/vercel/next.js/issues/64114#issuecomment-2440625243
+  ...compat.extends('next/core-web-vitals', 'next/typescript'),
   {
-    extends: compat.extends(
-      'eslint:recommended',
-      'plugin:@typescript-eslint/recommended',
-      'next/core-web-vitals',
-      'prettier'
-    ),
     plugins: {
       '@typescript-eslint': tseslint.plugin,
     },
@@ -39,5 +30,6 @@ export default tseslint.config(
         rootDir: 'src/',
       },
     },
-  }
+  },
+  eslintConfigPrettier
 )
