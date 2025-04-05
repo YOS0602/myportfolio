@@ -1,11 +1,10 @@
-import { defineConfig } from 'eslint/config'
-import typescriptEslint from '@typescript-eslint/eslint-plugin'
 import globals from 'globals'
-import tsParser from '@typescript-eslint/parser'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import js from '@eslint/js'
 import { FlatCompat } from '@eslint/eslintrc'
+import eslint from '@eslint/js'
+import tseslint from 'typescript-eslint'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -15,7 +14,9 @@ const compat = new FlatCompat({
   allConfig: js.configs.all,
 })
 
-export default defineConfig([
+export default tseslint.config(
+  eslint.configs.recommended,
+  tseslint.configs.recommended,
   {
     extends: compat.extends(
       'eslint:recommended',
@@ -24,19 +25,19 @@ export default defineConfig([
       'prettier'
     ),
     plugins: {
-      '@typescript-eslint': typescriptEslint,
+      '@typescript-eslint': tseslint.plugin,
     },
     languageOptions: {
       globals: {
         ...globals.browser,
         ...globals.node,
       },
-      parser: tsParser,
+      parser: tseslint.parser,
     },
     settings: {
       next: {
         rootDir: 'src/',
       },
     },
-  },
-])
+  }
+)
