@@ -17,7 +17,7 @@
     "serve:static": "cd out && npx http-server"
   },
   "dependencies": {
-    "next": "^15.3.1",
+    "next": "^15.3.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
