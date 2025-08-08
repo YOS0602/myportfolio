@@ -133,3 +133,23 @@ npm update
 - [npmで管理しているライブラリのバージョンアップ手順まとめ](https://zenn.dev/yoshii0110/articles/820187fd237b44)
 - [【npm】パッケージのupdate方法を紹介します](https://www.fenet.jp/infla/column/technology/%E3%80%90npm%E3%80%91%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%AEupdate%E6%96%B9%E6%B3%95%E3%82%92%E7%B4%B9%E4%BB%8B%E3%81%97%E3%81%BE%E3%81%99/)
 - [「npm audit」って何？って時に少し調べた時のノート](https://overworker.hatenablog.jp/entry/2020/10/18/234904)
+
+## Nodeバージョンを上げるとき
+
+Voltaバージョンを上げる。
+
+```sh
+volta pin node@XX
+```
+
+（使ってないけど） `.devcontainer/docker-compose.yml` のimageタグを更新。
+
+```diff
+services:
+  app:
+    container_name: my-portfolio
+-   image: node:20
++   image: node:22
+```
+
+Vercel の Project Settings ページにおける Build and Deployment で Node.js バージョンを指定する。
